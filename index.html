@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        body{
+            height: 100vh;
+        }
+        canvas{
+            cursor:crosshair;
+            background-color: rgb(95, 177, 224);
+        }
+        p{
+            padding: 5px;
+            position: fixed;
+            font-size: 2rem;
+        }
+        h1{
+            font-size: 3rem;
+            font-style: bold;
+        }
+        button{
+            border: none;
+            outline: none;
+            background-color: rgb(53, 65, 105);
+            width: 50%;
+            height: 20%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .unselectable {
+            -webkit-user-select: none;  
+            -moz-user-select: none;    
+            -ms-user-select: none;     
+            user-select: none;            
+        }
+        .menu{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            justify-content: space-around;
+            align-items: center;
+            height: 12rem;
+            width: 24rem;
+            box-shadow: 3px 3px 10px rgb(53, 65, 105);
+        }
+        .container{
+            position: fixed;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <p class="unselectable">puan: 0</p>
+    <div class="container">
+        <div class="menu">
+        <h1 id="score" class="unselectable">0</h1>
+        <p class="unselectable">Puan</p>
+        <button id="buton" class="unselectable">Tekrar Dene</button>
+    </div>
+    </div>
+    
+    <canvas></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>
